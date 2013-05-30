@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://services.postcodeanywhere.co.uk/EmailValidation/Interactive/Validate/v1.10/json3.ws?Email=info@google.com&Key=AA11-AA11-AA11-AA11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        bm8tY2FjaGU=
+      !binary "UHJhZ21h":
+      - !binary |-
+        bm8tY2FjaGU=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjtjaGFyc2V0PVVURi04
+      !binary "Q29udGVudC1FbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+      !binary "RXhwaXJlcw==":
+      - !binary |-
+        LTE=
+      !binary "U2VydmVy":
+      - !binary |-
+        TWljcm9zb2Z0LUlJUy83LjU=
+      !binary "QWNjZXNzLUNvbnRyb2wtQWxsb3ctT3JpZ2lu":
+      - !binary |-
+        Kg==
+      !binary "QWNjZXNzLUNvbnRyb2wtQWxsb3ctSGVhZGVycw==":
+      - !binary |-
+        Q29udGVudC1UeXBl
+      !binary "UmVjb3Jkcw==":
+      - !binary |-
+        MQ==
+      !binary "WC1Bc3BuZXQtVmVyc2lvbg==":
+      - !binary |-
+        NC4wLjMwMzE5
+      !binary "WC1Qb3dlcmVkLUJ5":
+      - !binary |-
+        QVNQLk5FVA==
+      !binary "RGF0ZQ==":
+      - !binary |-
+        VGh1LCAzMCBNYXkgMjAxMyAxNTo0OTozOCBHTVQ=
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        Mjg5
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
+        kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
+        AWz2zkrayZ4hgKrIHz9+fB8/In7xR2dtvmg+evS9X/zRaV1X9UePPtr7aPTR
+        07yZ1sWqLaolffLV8u2yulqmb/Nr+u4kWzc5ffpmnuOT9Lpap1mdp+umWF6k
+        bZVm02neNGlL3zd5fVlM8/Qqa9Jl1abn1Xo5GxOQV3lTlWuF/7LMsyZPp/N8
+        +pZey1p+F7CLJp1WdZ1P23F61qbNvFqXs3SSp8WS25xX9SI9Pt7d3Q7/GX/0
+        S77/S/6fAAAA//9W01/93QAAAA==
+    http_version: 
+  recorded_at: Thu, 30 May 2013 15:49:41 GMT
+recorded_with: VCR 2.5.0
