@@ -4,6 +4,10 @@ require 'postcode_anywhere/email_validation'
 
 require 'capybara/rspec'
 require 'vcr'
+require 'pry'
+
+Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
+
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true

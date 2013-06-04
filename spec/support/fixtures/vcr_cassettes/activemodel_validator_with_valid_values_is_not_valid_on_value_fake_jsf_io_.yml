@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://services.postcodeanywhere.co.uk/EmailValidation/Interactive/Validate/v1.10/json3.ws?Email=@google.com&Key={{Key}}
+    uri: http://services.postcodeanywhere.co.uk/EmailValidation/Interactive/Validate/v1.10/json3.ws?Email=fake@jsf.io&Key={{Key}}
     body:
       encoding: US-ASCII
       string: ''
@@ -54,18 +54,18 @@ http_interactions:
         QVNQLk5FVA==
       !binary "RGF0ZQ==":
       - !binary |-
-        VHVlLCAwNCBKdW4gMjAxMyAxNTowNToxNiBHTVQ=
+        VHVlLCAwNCBKdW4gMjAxMyAxNTowNjo0NyBHTVQ=
       !binary "Q29udGVudC1MZW5ndGg=":
       - !binary |-
-        MTk1
+        MjIz
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
         kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
-        AWz2zkrayZ4hgKrIHz9+fB8/In7xR2dtvmg+evS9X/zR6SIryo8effTR6KMv
-        6LfXeX2Z1/L3T2ZlMXtW1Yus/ejReVY2+eijZ9V6OXu6bF7l06qe6ce/5Pu/
-        5P8JAAD//yqv5RRTAAAA
+        AWz2zkrayZ4hgKrIHz9+fB8/In7xR2dtvmg+evS9X/zR6SIryo8efXSevc1/
+        z59uzsdF9dHooy/ow9d5fZnX9FXWrBbv7o0vquqizNF8PK0W1Ogns7KYPavq
+        RdZ+9Kit1/noo2fVejl7umxe5dOqnsmnv+T7v+T/CQAA///7UfONcQAAAA==
     http_version: 
-  recorded_at: Tue, 04 Jun 2013 15:05:27 GMT
+  recorded_at: Tue, 04 Jun 2013 15:06:58 GMT
 recorded_with: VCR 2.5.0
