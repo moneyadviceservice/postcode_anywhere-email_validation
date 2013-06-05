@@ -1,5 +1,7 @@
 # PostcodeAnywhere::EmailValidation
 
+[![Code Climate][code-climate-badge]] [code-climate-feed]
+
 Verifies the existence of an email address using the
 [Email Validation web services] [email-validation]
 from [PostcodeAnywhere].
@@ -44,3 +46,9 @@ PostcodeAnywhere::EmailValidation.valid?('info@google.com') #=> true
 
 [email-validation]: http://www.postcodeanywhere.co.uk/email-validation/
   "PostcodeAnywhere's Email Validation web services"
+
+[code-climate-feed]: https://codeclimate.com/github/moneyadviceservice/postcode_anywhere-email_validation
+  "Code Climate"
+
+[code-climate-badge]: https://codeclimate.com/github/moneyadviceservice/postcode_anywhere-email_validation.png
+  "Code Climate"
