@@ -7,6 +7,13 @@ module PostcodeAnywhere
 
       subject { ::ValidatedClass.new }
 
+      context 'blank email' do
+        it 'is not valid' do
+          PostcodeAnywhere::EmailValidation.should_not_receive(:valid?)
+          expect(subject).to_not be_valid
+        end
+      end
+
       context 'Using Postcode Anywhere' do
         before { subject.email = 'an_email' }
 
