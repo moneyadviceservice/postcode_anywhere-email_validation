@@ -2,6 +2,7 @@
 
 [![Build Status][build-status-badge]] [build-status]
 [![Code Climate][code-climate-badge]] [code-climate-feed]
+[![Coverage Status][coverage-status-badge]] [coverage-status]
 
 Verifies the existence of an email address using the
 [Email Validation web services] [email-validation]
@@ -59,3 +60,9 @@ PostcodeAnywhere::EmailValidation.valid?('info@google.com') #=> true
 
 [code-climate-badge]: https://codeclimate.com/github/moneyadviceservice/postcode_anywhere-email_validation.png
   "Code Climate"
+
+[coverage-status]: https://coveralls.io/r/moneyadviceservice/postcode_anywhere-email_validation
+  "Coverage Status"
+
+[coverage-status-badge]: https://coveralls.io/repos/moneyadviceservice/postcode_anywhere-email_validation/badge.png
+  "Coverage Status"

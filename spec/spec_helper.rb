@@ -3,11 +3,11 @@ ENV['POSTCODE_ANYWHERE_KEY'] ||= 'AA11-AA11-AA11-AA11'
 require 'postcode_anywhere/email_validation'
 
 require 'capybara/rspec'
+require 'coveralls'
 require 'vcr'
 require 'pry'
 
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
-
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
@@ -30,3 +30,5 @@ VCR.configure do |config|
   config.hook_into :webmock
   config.filter_sensitive_data('{{Key}}') { ENV['POSTCODE_ANYWHERE_KEY'] }
 end
+
+Coveralls.wear!
