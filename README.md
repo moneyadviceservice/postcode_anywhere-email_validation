@@ -35,6 +35,18 @@ PostcodeAnywhere::EmailValidation.key = 'AA11-AA11-AA11-AA11'
 PostcodeAnywhere::EmailValidation.valid?('info@google.com') #=> true
 ```
 
+Or use the provided ActiveModel validator:
+
+```ruby
+class ValidatedClass
+  include ActiveModel::Validations
+
+  attr_accessor :email
+
+  validates_with PostcodeAnywhere::EmailValidation::Validator, attributes: %w{ email }
+end
+```
+
 ## Contributing
 
 1. Fork it
