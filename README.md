@@ -1,5 +1,6 @@
 # PostcodeAnywhere::EmailValidation
 
+[![Build Status][build-status-badge]] [build-status]
 [![Code Climate][code-climate-badge]] [code-climate-feed]
 
 Verifies the existence of an email address using the
@@ -46,6 +47,12 @@ PostcodeAnywhere::EmailValidation.valid?('info@google.com') #=> true
 
 [email-validation]: http://www.postcodeanywhere.co.uk/email-validation/
   "PostcodeAnywhere's Email Validation web services"
+
+[build-status]: https://travis-ci.org/moneyadviceservice/postcode_anywhere-email_validation
+  "Build Status"
+
+[build-status-badge]: https://travis-ci.org/moneyadviceservice/postcode_anywhere-email_validation.png
+  "Build Status"
 
 [code-climate-feed]: https://codeclimate.com/github/moneyadviceservice/postcode_anywhere-email_validation
   "Code Climate"
