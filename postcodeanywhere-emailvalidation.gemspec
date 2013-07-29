@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.description           = %q{Verify the existence of an email address.}
   spec.summary               = %q{Verifies the existence of an email address using the Email Validation web services from PostcodeAnywhere.}
   spec.homepage              = 'https://github.com/moneyadviceservice/postcode_anywhere-email_validation'
-  spec.date                  = "2013-06-04"
+  spec.date                  = '2013-06-04'
   spec.files                 = `git ls-files`.split($/)
   spec.executables           = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files            = spec.files.grep(%r{^(test|spec|features)/})
