@@ -28,6 +28,14 @@ module PostcodeAnywhere
         end
       end
 
+      describe 'RSpec Matcher' do
+        context 'with default attribute' do
+          it { should validate_email_with_postcode_anywhere }
+        end
+        context 'with custom attribute' do
+          it { should validate_email_with_postcode_anywhere.on_attribute(:email) }
+        end
+      end
     end
   end
 end

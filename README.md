@@ -47,6 +47,20 @@ class ValidatedClass
 end
 ```
 
+## Usage with RSpec
+
+With default attribute: :email
+
+```ruby
+  it { should validate_email_with_postcode_anywhere }
+```
+
+With custom attribute.
+
+```ruby
+  it { should validate_email_with_postcode_anywhere.on_attribute(:email) }
+```
+
 ## Contributing
 
 1. Fork it
