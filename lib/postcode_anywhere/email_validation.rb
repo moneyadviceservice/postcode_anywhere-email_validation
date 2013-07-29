@@ -2,6 +2,7 @@ require 'postcode_anywhere/email_validation/response'
 require 'postcode_anywhere/email_validation/validation_error'
 require 'postcode_anywhere/email_validation/validator'
 require 'postcode_anywhere/email_validation/version'
+require 'postcode_anywhere/matchers/email_validator' if defined?(RSpec)
 
 require 'rest_client'
 
