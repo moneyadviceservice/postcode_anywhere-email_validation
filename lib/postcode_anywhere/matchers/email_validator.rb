@@ -23,7 +23,7 @@ module PostcodeAnywhere
       end
 
       def failure_message(model, should_or_should_not)
-        "#{model.class} should #{should_or_should_not} have 'PostcodeAnywhere::EmailValidation::Validator' on attribute #{attribute}"
+        "#{model.class} #{should_or_should_not} have 'PostcodeAnywhere::EmailValidation::Validator' on attribute #{attribute}"
       end
     end
   end
