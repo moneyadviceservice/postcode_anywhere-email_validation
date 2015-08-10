@@ -11,7 +11,7 @@ module PostcodeAnywhere::EmailValidation
     it { should respond_to :cause }
     it { should respond_to :resolution }
 
-    its(:to_s) { should eql('An error') }
+    it { expect(subject.to_s).to eql('An error') }
 
     context 'with metadata' do
       subject do
@@ -21,9 +21,9 @@ module PostcodeAnywhere::EmailValidation
                             resolution: 'A resolution')
       end
 
-      its(:code) { should eql('0') }
-      its(:cause) { should eql('A cause') }
-      its(:resolution) { should eql('A resolution') }
+      it { expect(subject.code).to eql('0') }
+      it { expect(subject.cause).to eql('A cause') }
+      it { expect(subject.resolution).to eql('A resolution') }
     end
   end
 end
