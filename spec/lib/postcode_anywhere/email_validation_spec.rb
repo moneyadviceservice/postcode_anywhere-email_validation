@@ -24,19 +24,19 @@ module PostcodeAnywhere
       context 'with a valid email and a DNS record is found' do
         let(:json) { build_json }
 
-        it { should be_true }
+        it { should be_truthy }
       end
 
       context 'with invalid email' do
         let(:json) { build_json(ValidFormat: false) }
 
-        it { should be_false }
+        it { should be_falsey }
       end
 
       context 'when a DNS entry is not found' do
         let(:json) { build_json(FoundDnsRecord: false) }
 
-        it { should be_false }
+        it { should be_falsey }
       end
 
       context 'with an error' do
