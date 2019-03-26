@@ -22,6 +22,5 @@ module PostcodeAnywhere
         response.valid?
       end
     end
-
   end
 end

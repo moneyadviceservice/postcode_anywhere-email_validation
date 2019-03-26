@@ -3,7 +3,6 @@ require 'json'
 module PostcodeAnywhere
   module EmailValidation
     class Response
-
       def self.parse(json)
         response = JSON.parse(json)['Items'].first
         error    = if response['Error']
@@ -29,9 +28,9 @@ module PostcodeAnywhere
       attr_accessor :error
 
       def initialize(valid_format, found_dns_record, error)
-        self.valid_format     = valid_format
-        self.found_dns_record = found_dns_record
-        self.error            = error
+        @valid_format     = valid_format
+        @found_dns_record = found_dns_record
+        @error            = error
       end
 
       def valid_format?
