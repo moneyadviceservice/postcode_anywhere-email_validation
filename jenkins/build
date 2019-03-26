@@ -1,0 +1,23 @@
+#!/bin/bash -l
+set -e
+
+if [ -f /.dockerenv ]; then
+  source ~/.bashrc
+  rvm use default
+  bundle config github.com $GITHUB_USER:$GITHUB_PASS
+fi
+
+function run {
+  declare -a build_command=("$@")
+    echo ''
+    echo "=== Running \`${build_command[*]}\`"
+    if ! ${build_command[*]}; then
+      echo "=== This build failed."
+      exit 1
+    fi
+}
+
+run bundle install --quiet
+run gem build *.gemspec
+run gem inabox *.gem -g http://gems.dev.mas.local
+
