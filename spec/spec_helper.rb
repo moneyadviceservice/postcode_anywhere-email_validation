@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ENV['POSTCODE_ANYWHERE_KEY'] ||= 'AA11-AA11-AA11-AA11'
 
 require 'postcode_anywhere/email_validation'
@@ -5,7 +7,7 @@ require 'postcode_anywhere/email_validation'
 require 'capybara/rspec'
 require 'coveralls'
 require 'vcr'
-require 'pry'
+require 'pry-byebug'
 
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
@@ -17,8 +19,7 @@ RSpec.configure do |config|
   end
 
   config.around(:each, :vcr) do |example|
-    name = example.metadata[:full_description].downcase.gsub(/[^\w\/]+/, '_')
-
+    name = example.metadata[:full_description].downcase.gsub(%r{[^\w/]+}, '_')
     VCR.use_cassette(name) { example.call }
   end
 
