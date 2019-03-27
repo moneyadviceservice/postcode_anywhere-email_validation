@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe 'ActiveModel validator', :vcr do
@@ -8,22 +10,20 @@ describe 'ActiveModel validator', :vcr do
   subject { ValidatedClass.new }
 
   context 'with invalid values' do
-    %w(@example.com john.doe@).each do |value|
+    %w[@example.com john.doe@].each do |value|
       it "is not valid on value:  #{value.inspect}" do
         subject.email = value
         expect(subject).to_not be_valid
       end
     end
-
   end
 
   context 'with valid values' do
-    %w(pablo@google.com fake@jsf.io).each do |value|
+    %w[pablo@google.com fake@jsf.io].each do |value|
       it "is not valid on value:  #{value.inspect}" do
         subject.email = value
         expect(subject).to be_valid
       end
     end
   end
-
 end

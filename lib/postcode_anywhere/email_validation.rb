@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'postcode_anywhere/email_validation/response'
 require 'postcode_anywhere/email_validation/validation_error'
 require 'postcode_anywhere/email_validation/validator'
@@ -8,9 +10,8 @@ require 'rest_client'
 
 module PostcodeAnywhere
   module EmailValidation
-
-    HOST = 'http://services.postcodeanywhere.co.uk/' +
-        'EmailValidation/Interactive/Validate/v1.10/json3.ws'
+    HOST = 'http://services.postcodeanywhere.co.uk/' \
+           'EmailValidation/Interactive/Validate/v1.10/json3.ws'
 
     class << self
       attr_accessor :key

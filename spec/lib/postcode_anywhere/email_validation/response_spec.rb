@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 module PostcodeAnywhere::EmailValidation
@@ -22,15 +24,17 @@ module PostcodeAnywhere::EmailValidation
       end
 
       describe 'with an error' do
-        let(:error) { ValidationError.new('An error',
-                                          code:       '999',
-                                          cause:      'A cause',
-                                          resolution: 'A resolution') }
+        let(:error) do
+          ValidationError.new('An error',
+                              code: '999',
+                              cause: 'A cause',
+                              resolution: 'A resolution')
+        end
 
         subject { described_class.new(nil, nil, error) }
 
         it 'raises a validation error' do
-          assertions = -> error {
+          assertions = lambda { |error|
             expect(error).to be_instance_of(ValidationError)
             expect(error.to_s).to eql('An error')
             expect(error.code).to eql('999')
@@ -87,8 +91,8 @@ module PostcodeAnywhere::EmailValidation
 
         it 'parses the error details' do
           ValidationError.should_receive(:new).with('An error',
-                                                    code:       '999',
-                                                    cause:      'A cause',
+                                                    code: '999',
+                                                    cause: 'A cause',
                                                     resolution: 'A resolution')
 
           subject

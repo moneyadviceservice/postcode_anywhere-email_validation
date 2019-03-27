@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module PostcodeAnywhere
   module Matchers
     RSpec::Matchers.define :validate_email_with_postcode_anywhere do
@@ -7,7 +9,9 @@ module PostcodeAnywhere
 
       match do |model|
         model_validators = model.class.validators_on(attribute)
-        model_validators.any? { |validator| validator.instance_of?(PostcodeAnywhere::EmailValidation::Validator) }
+        model_validators.any? do |validator|
+          validator.instance_of?(PostcodeAnywhere::EmailValidation::Validator)
+        end
       end
 
       def attribute
@@ -23,7 +27,9 @@ module PostcodeAnywhere
       end
 
       def failure_message(model, should_or_should_not)
-        "#{model.class} #{should_or_should_not} have 'PostcodeAnywhere::EmailValidation::Validator' on attribute #{attribute}"
+        "#{model.class} #{should_or_should_not} have" \
+          "#'PostcodeAnywhere::EmailValidation::Validator'" \
+          "#on attribute #{attribute}"
       end
     end
   end

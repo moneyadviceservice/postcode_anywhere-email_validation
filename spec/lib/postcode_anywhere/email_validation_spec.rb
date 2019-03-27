@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 module PostcodeAnywhere
@@ -5,7 +7,7 @@ module PostcodeAnywhere
     it { should respond_to(:key) }
     it { should respond_to(:valid?).with(1).argument }
 
-    describe ".valid?" do
+    describe '.valid?' do
       subject { described_class.valid?('john.doe@example.com') }
 
       before(:all) do
@@ -15,10 +17,10 @@ module PostcodeAnywhere
       before(:each) do
         stub_const('PostcodeAnywhere::EmailValidation::HOST', :host)
 
-        RestClient.
-            should_receive(:get).
-            with(:host, params: { Key: :the_key, Email: 'john.doe@example.com' }).
-            and_return(json)
+        RestClient
+          .should_receive(:get)
+          .with(:host, params: { Key: :the_key, Email: 'john.doe@example.com' })
+          .and_return(json)
       end
 
       context 'with a valid email and a DNS record is found' do
@@ -41,7 +43,7 @@ module PostcodeAnywhere
 
       context 'with an error' do
         let(:json) do
-          %[
+          %(
             {"Items":
               [
                 {
@@ -52,7 +54,7 @@ module PostcodeAnywhere
                 }
               ]
             }
-          ]
+          )
         end
 
         it 'raises an exception when error' do
@@ -62,9 +64,9 @@ module PostcodeAnywhere
     end
 
     def build_json(options = {})
-      default_options = { Email:          'john.doe@example.com',
-                          MailServer:     'mail.example.com',
-                          ValidFormat:    true,
+      default_options = { Email: 'john.doe@example.com',
+                          MailServer: 'mail.example.com',
+                          ValidFormat: true,
                           FoundDnsRecord: true }
 
       { Items: [default_options.merge(options)] }.to_json

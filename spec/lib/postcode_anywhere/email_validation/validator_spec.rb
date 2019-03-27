@@ -1,10 +1,10 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 module PostcodeAnywhere
   module EmailValidation
-
     describe Validator do
-
       subject { ::ValidatedClass.new }
 
       context 'blank email' do

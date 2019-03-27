@@ -1,9 +1,9 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 module PostcodeAnywhere::EmailValidation
-
   describe 'Validator Matcher' do
-
     context 'when Validator is defined' do
       subject { ::ValidatedClass.new }
 
@@ -19,6 +19,5 @@ module PostcodeAnywhere::EmailValidation
 
       it { should_not validate_email_with_postcode_anywhere }
     end
-
   end
 end

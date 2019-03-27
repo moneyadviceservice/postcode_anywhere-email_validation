@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 module PostcodeAnywhere::EmailValidation
@@ -16,8 +18,8 @@ module PostcodeAnywhere::EmailValidation
     context 'with metadata' do
       subject do
         described_class.new('An error',
-                            code:       '0',
-                            cause:      'A cause',
+                            code: '0',
+                            cause: 'A cause',
                             resolution: 'A resolution')
       end
 
